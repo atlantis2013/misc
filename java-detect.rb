@@ -10,7 +10,7 @@ Win32::Registry::HKEY_LOCAL_MACHINE.open('Software\Microsoft\Windows\CurrentVers
       if not k["DisplayVersion"].eql? version
        puts 'You should update or remove this version of java!'
       end
-	  sleep 10
+    sleep 10
     end
   end
 end

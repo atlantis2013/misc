@@ -51,15 +51,15 @@ class Metasploit3 < Msf::Post
   end
 
   def database_load(user_name,password)
-	  report_auth_info(
-		      :post => session.session_host,
-          :port => 445,
-					:sname => 'smb',
-					:proto => 'tcp',
-					:source_type => "exploit",
-					:user => user_name,
-					:pass => password,
-			)
+    report_auth_info(
+              :post => session.session_host,
+              :port => 445,
+              :sname => 'smb',
+              :proto => 'tcp',
+              :source_type => "exploit",
+              :user => user_name,
+              :pass => password,
+    )
     rescue => e
       puts e
   end
